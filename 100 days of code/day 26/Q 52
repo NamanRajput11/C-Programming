@@ -1,0 +1,42 @@
+// Program to print the following pattern:
+//
+// *
+// 
+// * 
+// * 
+// *
+// 
+// * 
+// * 
+// * 
+// * 
+// *
+// 
+// * 
+// * 
+// *
+// 
+
+#include <stdio.h>
+
+int main() {
+    int pattern[][5] = {
+        {1,0,0,0,0},
+        {1,1,1,1,1},
+        {1,1,1,0,0},
+        {1,0,0,0,0}
+    };
+
+    int groups = 4;
+
+    for (int g = 0; g < groups; g++) {
+        for (int i = 0; i < 5; i++) {
+            if (pattern[g][i] == 1) {
+                printf("*\n");
+            }
+        }
+        printf("\n"); // Separate groups
+    }
+
+    return 0;
+}
